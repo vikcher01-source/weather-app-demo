@@ -34,7 +34,7 @@ export default function Home() {
     console.log("Fetching weather for: ", city); // Дебаг, полезно видеть в консоли
 
     try {
-      const apiKey = process.env.NEXT_PUBLIC_WEATHER_API_KEY; // Беру из env, безопасно
+      const apiKey = '911a3e610bb08c58956de88acc78ebc8'; // Тестовый ключ — удалить после!
       const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`);
       
       if (!res.ok) {
